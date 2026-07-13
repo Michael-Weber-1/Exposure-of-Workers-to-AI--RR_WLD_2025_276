@@ -57,13 +57,87 @@ are not defined in the do-files themselves — set them (e.g., in a
 `profile.do` or at the top of a master script) to point at your local copy of
 the underlying microdata before running the pipeline.
 
-## Data
+## Data sources
 
-The underlying microdata (GLD and I2D2 country survey extracts, the
-ISCO-SOC/AIOE crosswalk workbook, and World Bank income-classification and
-GNI-per-capita series) are **not redistributed in this repository** because
-of third-party data-sharing restrictions. See the reproducibility package
-page linked above for information on data availability and access.
+The underlying microdata are **not redistributed in this repository**
+because of third-party data-sharing restrictions (see the reproducibility
+package page linked above for access information). The inputs consumed by
+the code, as read directly from the do-files, are:
+
+- **Global Labor Database (GLD)** — the World Bank's harmonized collection
+  of national household and labor-force survey microdata. `Harmonize and
+  append survey.do` scans `$data/GLD-Add/last_survey` for one `.dta` extract
+  per country/survey-round, keeps a common set of variables (occupation,
+  industry, employment status, wages, hours, urban/rural, education,
+  electricity and internet access, and survey weights), and appends them
+  into a single cross-country panel (`GLD_All_last.dta`).
+- **I2D2 (International Income Distribution Database)** — used for the
+  United States. `I2D2 to GLD.do` takes a CPS-based I2D2 extract
+  (`USA_2018_I2D2_CPS.dta`) and renames/recodes its variables (e.g. `gender`
+  → `male`, `urb` → `urban`, `edulevel1-3` → `educat7`/`educat5`/`educat4`,
+  `industry`/`industry1` → `industrycat10`/`industrycat4`) to match GLD
+  conventions, producing `USA_GLD.dta`.
+- **AI Occupational Exposure (AIOE) index** (Felten, Raj, and Seamans) — a
+  measure of occupational exposure to AI defined at the level of the US
+  Standard Occupational Classification (SOC). `ISCO SOC.do` imports a
+  SOC-to-ISCO-08 crosswalk workbook (`ISCO_SOC_Crosswalk.xls`, sheet "2010
+  SOC to ISCO-08") and merges in the AIOE score by SOC code
+  (`SOCAIOE.dta`), producing an AIOE score at the 4-digit ISCO-08 level.
+  Where a 4-digit ISCO code has no direct SOC match, the score is imputed
+  hierarchically from the group average at the 3-, then 2-, then 1-digit
+  ISCO level. A parallel crosswalk to US Census occupation codes
+  (`CensusAIOE.dta`) is also produced.
+- **World Bank World Development Indicators**, accessed live via the
+  `wbopendata` package — GNI per capita, Atlas method, current US$
+  (indicator `NY.GNP.PCAP.CD`) and the World Bank country income
+  classification (High/Upper-middle/Lower-middle/Low income), used in
+  `Analysis_AIOE_last.do` to group and plot AI exposure by country income
+  level and against GNI per capita.
+- **Auxiliary country benchmark surveys for electricity-access imputation**
+  — `Imputation.do` fills in missing household/workplace electricity-access
+  indicators for a handful of low- and lower-middle-income countries by
+  fitting a logit model (on urban/rural location, industry, education, and
+  sometimes hours worked) using a neighboring or regional country as the
+  training benchmark, then classifying the missing cases at a 0.5 predicted-
+  probability cutoff. This step draws on extra benchmark extracts not
+  covered by the main GLD pull: `SLE_2011.dta`, `PAK_2015.dta`,
+  `ZMB_2015.dta`, and `ZWE_2017.dta` (under `$data/Imputation/`). For
+  countries with independently known electrification rates of ~99-100%
+  (e.g. Brazil, Chile, Mexico, Thailand, Türkiye, the United States),
+  electricity access is instead assumed directly rather than imputed.
+
+**Note on pipeline completeness:** the do-files in this package pick up
+from `GLD_All_AI_last.dta` in `Imputation.do` — i.e. the step that merges
+the harmonized GLD/I2D2 panel (`GLD_All_last.dta`/`USA_GLD.dta`) with the
+occupation-level AIOE crosswalk (`SOCISAIOE.dta`) into that file is not
+itself included as a separate do-file here.
+
+### Geographic coverage
+
+Countries referenced explicitly in the code (mainly in the electricity-
+imputation step of `Imputation.do`, plus the United States and Türkiye in
+`Analysis_AIOE_last.do`) include: Bangladesh, Bolivia, Brazil, Chile,
+Colombia, Egypt, Ethiopia, Georgia, The Gambia, India, Indonesia, Mexico,
+Mongolia, Nepal, Pakistan, the Philippines, Rwanda, Sierra Leone, South
+Africa, Sri Lanka, Tanzania, Thailand, Tunisia, Türkiye, the United States,
+Zambia, and Zimbabwe. The full analysis sample is whatever set of GLD
+country surveys is present under `$data/GLD-Add/last_survey` at run time,
+so actual country/year coverage may be broader than this list.
+
+### Key variables in the analysis file
+
+`Analysis_AIOE_last.do` operates on a person-level panel with, among
+others: `AIOE_adjusted` / `AIOE_adjusted_norm` (the AIOE score, rescaled
+0-100), `AIOE_bin` (quartile groups: low / moderate-low / moderate-high /
+high exposure), `occup` (1-digit ISCO-08) and `occup_isco_08` (4-digit
+ISCO-08), `industrycat10`, `countrycode`/`countryname`, `year`, `male`,
+`age`, `urban`, `educat4`, `empstat`, `electricity`, and `weight` (survey
+sampling weight). It cross-tabulates AI exposure by country income group,
+gender, age group, education, urban/rural location, industry, and
+electricity access, runs country/occupation/industry-controlled OLS
+regressions of AIOE on worker characteristics by income group, and checks
+the sensitivity of the results to occupation-code granularity (1- vs 2- vs
+4-digit ISCO) using Shannon/Simpson diversity measures (`entropyetc`).
 
 ## Software requirements
 
