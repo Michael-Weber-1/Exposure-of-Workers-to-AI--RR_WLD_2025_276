@@ -1,0 +1,7 @@
+# Stata run artifacts
+*.log
+*.gph
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db

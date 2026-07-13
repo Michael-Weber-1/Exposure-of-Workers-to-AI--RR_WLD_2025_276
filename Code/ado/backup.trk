@@ -1,0 +1,257 @@
+* 00000007
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://fmwww.bc.edu/repec/bocode/e
+N estout.pkg
+D  5 Feb 2025
+U 1
+d 'ESTOUT': module to make regression tables
+d 
+d  estout produces a table of regression results from one or
+d several models for use with spreadsheets, LaTeX, HTML, or a
+d word-processor table. eststo stores a quick copy of the active
+d estimation results for later tabulation. esttab is a wrapper for
+d estout. It displays a pretty looking publication-style regression
+d table without much typing. estadd adds additional results to the
+d e()-returns for one or several models previously fitted and
+d stored. This package subsumes the previously circulated esto,
+d esta, estadd,  and estadd_plus. An earlier version of estout is
+d available  as estout1.
+d 
+d KW: estimates
+d KW: LaTeX
+d KW: HTML
+d KW: word processor
+d KW: output
+d 
+d Requires: Stata version 8.2
+d 
+d Distribution-Date: 20230212
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f _\_eststo.ado
+f _\_eststo.hlp
+f e\estadd.ado
+f e\estadd.hlp
+f e\estout.ado
+f e\estout.hlp
+f e\eststo.ado
+f e\eststo.hlp
+f e\estpost.ado
+f e\estpost.hlp
+f e\esttab.ado
+f e\esttab.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/w
+N wbopendata.pkg
+D  5 Feb 2025
+U 2
+d 'WBOPENDATA': module to access World Bank databases
+d 
+d  wbopendata draws from the main World Bank collections of
+d development indicators, compiled from officially-recognized
+d international sources, and made available through the World Bank
+d Open Data Initiative, and presents the most current and accurate
+d global development data available, and includes national,
+d regional and global estimates. Users can chose from one of three
+d of the languages supported by the database, namely, English,
+d Spanish, or French. Three possible downloads options are
+d currently supported: country - all indicators for all years for a
+d single country. topic - all indicators within a specific topic,
+d for all years and all countries. indicator - all years for all
+d countries for a single indicator. Users can also choose to have
+d the data displayed in either the wide or long format (wide is the
+d default option).
+d 
+d KW: World Bank
+d KW: development indicators
+d 
+d Requires: Stata version 9
+d 
+d Distribution-Date: 20200709
+d 
+d Author: Joao Pedro Azevedo, World Bank
+d Support: email jazevedo@@worldbank.org
+d 
+f w\wbopendata.ado
+f w\wbopendata_populate_list.ado
+f w\wbopendata_examples.ado
+f w\wbopendata.sthlp
+f w\wbopendata_indicators.sthlp
+f w\wbopendata_adminregion.sthlp
+f w\wbopendata_incomelevel.sthlp
+f w\wbopendata_lendingtype.sthlp
+f w\wbopendata_region.sthlp
+f w\wbopendata_sourceid.sthlp
+f w\wbopendata_topicid.sthlp
+f w\wbopendata.dlg
+f _\_api_read_indicators.ado
+f _\_api_read.ado
+f _\_countrymetadata.ado
+f _\_parameters.ado
+f _\_query_indicators.ado
+f _\_query_metadata.ado
+f _\_query.ado
+f _\_tknz.ado
+f _\_update_countrymetadata.ado
+f _\_update_indicators.ado
+f _\_update_wbopendata.ado
+f _\_wbod_tmpfile1.ado
+f _\_wbod_tmpfile2.ado
+f _\_wbod_tmpfile3.ado
+f _\_website.ado
+f i\indicators.txt
+f c\country.txt
+f w\world-c.dta
+f w\world-d.dta
+e
+S http://fmwww.bc.edu/repec/bocode/g
+N grstyle.pkg
+D  5 Feb 2025
+U 3
+d 'GRSTYLE': module to customize the overall look of graphs
+d 
+d  grstyle allows you to customize the overall look of graphs from
+d within a do-file without having to fiddle around with external
+d scheme files. The advantage of grstyle over manually editing a
+d scheme file is that everything needed to reproduce your graphs
+d can be included in a single do-file.
+d 
+d KW: graphics
+d KW: scheme files
+d KW: custom graphics
+d KW: plot
+d 
+d Requires: Stata version 9.2 and palettes from SSC (q.v.)
+d 
+d Distribution-Date: 20200919
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f g\grstyle.ado
+f g\grstyle.hlp
+f g\grstyle_set.ado
+f g\grstyle_set.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/i
+N iscogen.pkg
+D  5 Feb 2025
+U 4
+d 'ISCOGEN': module to translate ISCO codes
+d 
+d    iscogen is a tool to translate ISCO codes (International
+d Standard Classification of Occupations). Various transformations
+d such as  recoding between ISCO-08, ISCO-88, and ISCO-68 or
+d generating prestige scores  and occupational classes are
+d supported. A command to label ISCO codes is also provided.
+d 
+d KW:  ISCO-08
+d KW: ISCO-88
+d KW: ISCO-68
+d KW: International Socio-economic Index of Occupational Status ISEI
+d KW: Standard International Occupational Prestige Scale SIOPS
+d KW: European Socio-economic Classification ESEC
+d KW: EGP classes
+d KW: OESCH classes
+d KW: Magnitude Prestige Scale MPS
+d 
+d Requires: Stata version 11
+d 
+d Distribution-Date: 20201117
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f i\iscogen.ado
+f i\iscogen.sthlp
+f i\iscolbl.ado
+f i\iscolbl.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/e
+N entropyetc.pkg
+D  5 Feb 2025
+U 5
+d 'ENTROPYETC': module for entropy and related measures for categories
+d 
+d  entropyetc treats a single supplied variable, numeric or string,
+d as categorical, so that distinct values define distinct
+d categories, and calculates the number of distinct categories
+d observed, Shannon entropy H, exp H, Simpson's sum of squared
+d probabilities R and 1/R.  entropyetc2 is the previous version,
+d similar in principle, but different in detail and implementation.
+d It is renamed but kept on SSC to allow reproduction of results by
+d the previous version. The major issue with this version is that
+d it could fail when asked to produce results for very large
+d numbers of categories.
+d 
+d KW: inequality
+d KW: diversity
+d KW: concentration
+d KW: entropy
+d KW: Shannon
+d KW: Simpson
+d KW: Gini
+d KW: Herfindahl
+d KW: Hirschman
+d KW: Turing
+d 
+d Requires: Stata version 8.2 (entropyyetc), 11.2 (entropyetc2)
+d 
+d Distribution-Date: 20240621
+d 
+d Author: Nicholas J. Cox, Durham University
+d Support: email N.J.Cox@@durham.ac.uk
+d 
+f e\entropyetc.ado
+f e\entropyetc.sthlp
+f e\entropyetc2.ado
+f e\entropyetc2.sthlp
+e
+S http://www.stata.com/users/vwiggins
+N grc1leg.pkg
+D  5 Feb 2025
+U 6
+d grc1leg.  Combine graphs into one graph with a common legend.
+d Program by Vince Wiggins, StataCorp <vwiggins@@stata.com>.
+d Statalist distribution, 16 June 2003.
+d 
+d Exactly like -graph combine- but shows a single common legend for all
+d combined graphs.
+d 
+d Distribution-Date: 02jun2010
+f g\grc1leg.ado
+f g\grc1leg.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/f
+N filelist.pkg
+D  5 Feb 2025
+U 7
+d 'FILELIST': module to recursively search directories for files
+d 
+d   filelist searches a directory for files that match a specific
+d pattern and continues searching recursively in all its
+d subdirectories. Search results either replace the data in memory
+d or are saved as a Stata dataset on disk. The results include the
+d file size in bytes.
+d 
+d KW: data management
+d KW: directory
+d KW: file
+d KW: recursive
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20190518
+d 
+d Author: Robert Picard
+d Support: email picard@@netbox.com
+d 
+f f\filelist.ado
+f f\filelist.sthlp
+e
