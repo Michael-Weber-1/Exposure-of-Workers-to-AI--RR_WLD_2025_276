@@ -168,11 +168,32 @@ code), please also cite the package.
 
 ### Working paper
 
+**Plain text**
+
 > Demombynes, Gabriel, Jörg Langbein, and Michael Weber. 2025. "The
 > Exposure of Workers to Artificial Intelligence in Low- and Middle-Income
 > Countries." Policy Research Working Paper No. 11057. World Bank,
 > Washington, DC.
 > https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8
+
+**RIS**
+
+```ris
+TY  - RPRT
+AU  - Demombynes, Gabriel
+AU  - Langbein, Jörg
+AU  - Weber, Michael
+PY  - 2025
+TI  - The Exposure of Workers to Artificial Intelligence in Low- and Middle-Income Countries
+PB  - World Bank
+CY  - Washington, DC
+T3  - Policy Research Working Paper
+IS  - 11057
+UR  - https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8
+ER  -
+```
+
+**BibTeX**
 
 ```bibtex
 @techreport{demombynes2025exposure,
@@ -189,10 +210,29 @@ code), please also cite the package.
 
 ### Reproducibility package
 
+**Plain text**
+
 > Langbein, J., Demombynes, G., & Weber, M. (2025). Reproducibility package
 > for *The Exposure Of Workers To Artificial Intelligence In Low- And
 > Middle-Income Countries*. World Bank.
 > https://doi.org/10.60572/7QR1-AM34
+
+**RIS**
+
+```ris
+TY  - DATA
+AU  - Langbein, Jörg
+AU  - Demombynes, Gabriel
+AU  - Weber, Michael
+PY  - 2025
+TI  - Reproducibility package for The Exposure Of Workers To Artificial Intelligence In Low- And Middle-Income Countries
+PB  - World Bank
+DO  - 10.60572/7QR1-AM34
+UR  - https://doi.org/10.60572/7QR1-AM34
+ER  -
+```
+
+**BibTeX**
 
 ```bibtex
 @misc{langbein2025exposure_repro,
