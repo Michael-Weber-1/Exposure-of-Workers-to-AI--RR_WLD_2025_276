@@ -14,7 +14,7 @@ household/labor-force survey microdata from the World Bank's **Global Labor
 Database (GLD)** and **I2D2**.
 
 - 📦 Reproducibility package (data availability, documentation, terms of use): https://reproducibility.worldbank.org/catalog/255 (DOI: [10.60572/7QR1-AM34](https://doi.org/10.60572/7QR1-AM34))
-- 📄 Working paper (PDF): https://documents1.worldbank.org/curated/en/099629202052521198/pdf/IDU137d75e6614ee0145c919c7f1dc4831e7fa02.pdf
+- 📄 Working paper (PDF): https://documents1.worldbank.org/curated/en/099629202052521198/pdf/IDU137d75e6614ee0145c919c7f1dc4831e7fa02.pdf (DOI: [10.1596/1813-9450-11057](https://doi.org/10.1596/1813-9450-11057))
 - 🔗 Publication landing page: https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8
 
 See [Citation](#citation) below for how to cite the paper and this
@@ -173,8 +173,7 @@ code), please also cite the package.
 > Demombynes, Gabriel, Jörg Langbein, and Michael Weber. 2025. "The
 > Exposure of Workers to Artificial Intelligence in Low- and Middle-Income
 > Countries." Policy Research Working Paper No. 11057. World Bank,
-> Washington, DC.
-> https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8
+> Washington, DC. https://doi.org/10.1596/1813-9450-11057
 
 **RIS**
 
@@ -189,7 +188,8 @@ PB  - World Bank
 CY  - Washington, DC
 T3  - Policy Research Working Paper
 IS  - 11057
-UR  - https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8
+DO  - 10.1596/1813-9450-11057
+UR  - https://doi.org/10.1596/1813-9450-11057
 ER  -
 ```
 
@@ -204,7 +204,8 @@ ER  -
   number      = {11057},
   address     = {Washington, DC},
   year        = {2025},
-  url         = {https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8}
+  doi         = {10.1596/1813-9450-11057},
+  url         = {https://doi.org/10.1596/1813-9450-11057}
 }
 ```
 
