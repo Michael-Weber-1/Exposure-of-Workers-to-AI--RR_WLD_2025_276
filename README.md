@@ -13,7 +13,7 @@ by applying the **AI Occupational Exposure (AIOE)** index to harmonized
 household/labor-force survey microdata from the World Bank's **Global Labor
 Database (GLD)** and **I2D2**.
 
-- 📦 Reproducibility package (data availability, documentation, terms of use): https://reproducibility.worldbank.org/catalog/255
+- 📦 Reproducibility package (data availability, documentation, terms of use): https://reproducibility.worldbank.org/catalog/255 (DOI: [10.60572/7QR1-AM34](https://doi.org/10.60572/7QR1-AM34))
 - 📄 Working paper (PDF): https://documents1.worldbank.org/curated/en/099629202052521198/pdf/IDU137d75e6614ee0145c919c7f1dc4831e7fa02.pdf
 - 🔗 Publication landing page: https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8
 
@@ -168,7 +168,7 @@ code), please also cite the package.
 
 ### Working paper
 
-> Demombynes, Gabriel, Jörg Gero Langbein, and Michael Weber. 2025. "The
+> Demombynes, Gabriel, Jörg Langbein, and Michael Weber. 2025. "The
 > Exposure of Workers to Artificial Intelligence in Low- and Middle-Income
 > Countries." Policy Research Working Paper No. 11057. World Bank,
 > Washington, DC.
@@ -176,7 +176,7 @@ code), please also cite the package.
 
 ```bibtex
 @techreport{demombynes2025exposure,
-  author      = {Demombynes, Gabriel and Langbein, J{\"o}rg Gero and Weber, Michael},
+  author      = {Demombynes, Gabriel and Langbein, J{\"o}rg and Weber, Michael},
   title       = {The Exposure of Workers to Artificial Intelligence in Low- and Middle-Income Countries},
   institution = {World Bank},
   type        = {Policy Research Working Paper},
@@ -189,18 +189,18 @@ code), please also cite the package.
 
 ### Reproducibility package
 
-> Demombynes, Gabriel, Jörg Langbein, and Michael Weber. 2025.
-> Reproducibility package for "The Exposure of Workers to Artificial
-> Intelligence in Low- and Middle-Income Countries." World Bank
-> Reproducible Research Repository, package RR_WLD_2025_276.
-> https://reproducibility.worldbank.org/catalog/255
+> Langbein, J., Demombynes, G., & Weber, M. (2025). Reproducibility package
+> for *The Exposure Of Workers To Artificial Intelligence In Low- And
+> Middle-Income Countries*. World Bank.
+> https://doi.org/10.60572/7QR1-AM34
 
 ```bibtex
-@misc{demombynes2025exposure_repro,
-  author = {Demombynes, Gabriel and Langbein, J{\"o}rg and Weber, Michael},
-  title  = {Reproducibility package for "The Exposure of Workers to Artificial Intelligence in Low- and Middle-Income Countries"},
+@misc{langbein2025exposure_repro,
+  author = {Langbein, J{\"o}rg and Demombynes, Gabriel and Weber, Michael},
+  title  = {Reproducibility package for "The Exposure Of Workers To Artificial Intelligence In Low- And Middle-Income Countries"},
   howpublished = {World Bank Reproducible Research Repository, package RR\_WLD\_2025\_276},
   year   = {2025},
-  url    = {https://reproducibility.worldbank.org/catalog/255}
+  doi    = {10.60572/7QR1-AM34},
+  url    = {https://doi.org/10.60572/7QR1-AM34}
 }
 ```
