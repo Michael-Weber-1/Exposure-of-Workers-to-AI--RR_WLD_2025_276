@@ -1,6 +1,6 @@
 # Exposure of Workers to AI
 
-**Code for:** Gabriel Demombynes, Jörg Gero Langbein, and Michael Weber
+**Code for:** Gabriel Demombynes, Jörg Langbein, and Michael Weber
 (2025). *The Exposure of Workers to Artificial Intelligence in Low- and
 Middle-Income Countries.* World Bank Policy Research Working Paper No.
 11057.
@@ -189,7 +189,7 @@ code), please also cite the package.
 
 ### Reproducibility package
 
-> Demombynes, Gabriel, Jörg Gero Langbein, and Michael Weber. 2025.
+> Demombynes, Gabriel, Jörg Langbein, and Michael Weber. 2025.
 > Reproducibility package for "The Exposure of Workers to Artificial
 > Intelligence in Low- and Middle-Income Countries." World Bank
 > Reproducible Research Repository, package RR_WLD_2025_276.
@@ -197,7 +197,7 @@ code), please also cite the package.
 
 ```bibtex
 @misc{demombynes2025exposure_repro,
-  author = {Demombynes, Gabriel and Langbein, J{\"o}rg Gero and Weber, Michael},
+  author = {Demombynes, Gabriel and Langbein, J{\"o}rg and Weber, Michael},
   title  = {Reproducibility package for "The Exposure of Workers to Artificial Intelligence in Low- and Middle-Income Countries"},
   howpublished = {World Bank Reproducible Research Repository, package RR\_WLD\_2025\_276},
   year   = {2025},
